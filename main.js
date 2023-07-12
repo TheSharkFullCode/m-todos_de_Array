@@ -1,4 +1,4 @@
-function  myfuncion(){
+function  oscar(){
     let name = "oscar";
     document.getElementById("texto").vale = name;
 
@@ -43,10 +43,12 @@ console.log(array());
 
 //[4]: Crea una función flecha sin parámetros de entrada, Crea un objeto y retorna su longitud. Luego muesrta ese resultado por consola.
     let myobjetc ={name:'Dani'};
-    let operation4 = ()=> myobjetc;;
-    console.log(operation4(myobjetc.length));
-
-
+    //todo lo que estaba en parentesis donde comienza mi objeto.keys(myobject)todo eso era mi array: y el error era de que los objetos no tienen. lenght. solo los arrays.
+    let operation4 = (myobjetc)=> {return Object.keys(myobjetc).length};
+    console.log(operation4(myobjetc));
+    //aqui tambien relacionado con el anterior no supe que hacer...
+//----------------------- construye un array con las keys del objeto------------------->
+// .length. es un metodo de array
     // Mapea el array para obtener un nuevo array con los países de habla hispana Spanish.
     // Obten otro array con solo los de habla inglesa English.
     // Consigue finalmente otro array con los países que tengan United en su nombre.
@@ -83,8 +85,17 @@ let array5 = [
         language: "Arabic"
     },
     ];
-    let speakSpanis = array5.filter((language)=>language=='spanish');
-    console.log(speakSpanis);
+    //este no entendi muy bn porque? como aplicar la condicion.
+    // let speakSpanis = array5.filter((language)=>language=='spanish');
+    // console.log(speakSpanis);
+    let speakSpanish = array5.filter((language)=>language.language=='Spanish');
+    console.warn(speakSpanish);
+
+    // for (i=0; i<array5.length;i++){
+    //     array5[i] = speakSpanish.push(array5.language);
+    //     console.log(speakSpanish); 
+    // }
+
 
 
 //[6] Recorre el array anterior de países y muestra la siguiente frase por consola.
